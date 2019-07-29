@@ -1,0 +1,75 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  background-color: darkgray;
+}
+
+.invalidInputSignUp {
+  background-color: red;
+}
+
+.validInputSignUp {
+  background-color: green;
+}
+
+.loader {
+  display: none;
+  position: absolute;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 250px;
+  height: 250px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 30vh;
+      .inputs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        input {
+          margin: 8px;
+          padding: 4px;
+          width: 250px;
+        }
+      }
+      #google {
+        width: 262px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 4px;
+        margin: 8px;
+        img {
+          height: 32px;
+        }
+      }
+    }
+  }
+}
