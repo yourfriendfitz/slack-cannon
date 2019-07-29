@@ -1,4 +1,8 @@
+const log = console.log;
+
 const loader = document.getElementById("loginLoader");
+
+const loginButton = document.getElementById("loginButton");
 
 const [loginEmailInput, loginPasswordInput] = [
   document.getElementById("loginEmail"),
@@ -13,6 +17,18 @@ firebase.auth().onAuthStateChanged(function(user) {
     return;
   }
 });
+
+const emailPasswordSignIn = (email, password) => {
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(email, password)
+    .catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      log(errorMessage, errorCode);
+    });
+};
 
 const googleSignIn = async () => {
   loader.style.display = "block";
@@ -43,3 +59,9 @@ const googleSignIn = async () => {
       log(errorMessage, errorCode, email, credential);
     });
 };
+
+loginButton.addEventListener("click", () => {
+  const email = loginEmailInput.value;
+  const password = loginPasswordInput.value;
+  emailPasswordSignIn(email, password);
+});
