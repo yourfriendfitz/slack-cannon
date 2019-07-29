@@ -12,6 +12,8 @@ const [
   document.getElementById("signUpConfirmPassword")
 ];
 
+const signUpButton = document.getElementById("signUpButton");
+
 const showInvalidOrValidInput = (input, bool) => {
   if (bool) {
     input.classList.remove("invalidInputSignUp");
@@ -49,4 +51,40 @@ signUpConfirmPasswordInput.addEventListener("input", () => {
   } else {
     showInvalidOrValidInput(input, true);
   }
+});
+
+const addUserDisplayName = async name => {
+  const user = await firebase.auth().currentUser;
+  await user
+    .updateProfile({
+      displayName: name
+    })
+    .then(function() {
+      // Update successful.
+    })
+    .catch(function(error) {
+      // An error happened.
+    });
+};
+
+const createUserEmailPassword = async (name, email, password) => {
+  await firebase
+    .auth()
+    .createUserWithEmailAndPassword(email, password)
+    .catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ...
+    });
+  await addUserDisplayName(name);
+};
+
+signUpButton.addEventListener("click", async () => {
+  const [name, email, password] = [
+    signUpNameInput.value,
+    signUpEmailInput.value,
+    signUpPasswordInput.value
+  ];
+  await createUserEmailPassword(name, email, password);
 });
