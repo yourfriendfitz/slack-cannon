@@ -1,5 +1,10 @@
 const loader = document.getElementById("loginLoader");
 
+const [loginEmailInput, loginPasswordInput] = [
+  document.getElementById("loginEmail"),
+  document.getElementById("loginPassword")
+];
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     loader.style.display = "block";
