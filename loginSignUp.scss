@@ -39,6 +39,17 @@ html {
           width: 250px;
         }
       }
+      #google {
+        width: 262px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 4px;
+        margin: 8px;
+        img {
+          height: 32px;
+        }
+      }
     }
   }
 }
