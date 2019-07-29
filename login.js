@@ -1,15 +1,19 @@
+const loader = document.getElementById("loginLoader");
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
+    loader.style.display = "block";
     window.location.href = "index.html";
   } else {
     return;
   }
 });
 
-const googleSignIn = () => {
-  let provider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().signInWithRedirect(provider);
-  firebase
+const googleSignIn = async () => {
+  loader.style.display = "block";
+  let provider = await new firebase.auth.GoogleAuthProvider();
+  await firebase.auth().signInWithRedirect(provider);
+  await firebase
     .auth()
     .getRedirectResult()
     .then(function(result) {
@@ -20,7 +24,6 @@ const googleSignIn = () => {
         // ...
       }
       // The signed-in user info.
-      log(result.user);
       return result.user;
     })
     .catch(function(error) {
