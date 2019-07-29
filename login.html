@@ -15,7 +15,7 @@
         <input type="password" id="loginPassword" placeholder="Password" />
       </div>
       <button id="loginButton">Login</button>
-      <button id="google">
+      <button id="google" onclick="googleSignIn()">
         <img
           src="https://www.gstatic.com/firebasejs/ui/0.5.0/images/auth/google.svg"
         />
@@ -23,5 +23,29 @@
       </button>
       <p>Need an Account? <a href="signup.html">Sign Up</a></p>
     </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#config-web-app -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBCEFXvFzZE416fP4S6IQDEL27J5m-u5dY",
+        authDomain: "cannon-slack.firebaseapp.com",
+        databaseURL: "https://cannon-slack.firebaseio.com",
+        projectId: "cannon-slack",
+        storageBucket: "",
+        messagingSenderId: "116196377368",
+        appId: "1:116196377368:web:8205b710a728ebb4"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      let database = firebase.database();
+    </script>
+    <script src="login.js"></script>
   </body>
 </html>
