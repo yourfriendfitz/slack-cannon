@@ -4,3 +4,17 @@
     sans-serif;
   background-color: darkgray;
 }
+
+html{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    .container {
+      padding: 80px;
+    }
+  }
+}

@@ -2,4 +2,20 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: darkgray;
 }
+
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+html body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+html body .container {
+  padding: 80px;
+}
 /*# sourceMappingURL=loginSignUp.css.map */
