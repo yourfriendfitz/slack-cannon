@@ -1,67 +1,35 @@
-const log = console.log;
+const signUserOutButton = document.getElementById("signUserOutButton");
 
-const loader = document.getElementById("loginLoader");
+// Initialize the FirebaseUI Widget using Firebase.
+const ui = new firebaseui.auth.AuthUI(firebase.auth());
 
-const loginButton = document.getElementById("loginButton");
-
-const [loginEmailInput, loginPasswordInput] = [
-  document.getElementById("loginEmail"),
-  document.getElementById("loginPassword")
-];
-
-firebase.auth().onAuthStateChanged(function(user) {
-  if (user) {
-    loader.style.display = "block";
-    window.location.href = "index.html";
-  } else {
-    return;
-  }
-});
-
-const emailPasswordSignIn = (email, password) => {
-  firebase
-    .auth()
-    .signInWithEmailAndPassword(email, password)
-    .catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      log(errorMessage, errorCode);
-    });
+const uiConfig = {
+  callbacks: {
+    signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+      // User successfully signed in.
+      // Return type determines whether we continue the redirect automatically
+      // or whether we leave that to developer to handle.
+      return true;
+    },
+    uiShown: function() {
+      // The widget is rendered.
+      // Hide the loader.
+      document.getElementById("loader").style.display = "none";
+    }
+  },
+  // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
+  signInFlow: "popup",
+  signInSuccessUrl: "index.html",
+  signInOptions: [
+    // Leave the lines as is for the providers you want to offer your users.
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+    firebase.auth.EmailAuthProvider.PROVIDER_ID
+  ],
+  // Terms of service url.
+  tosUrl: "<your-tos-url>",
+  // Privacy policy url.
+  privacyPolicyUrl: "<your-privacy-policy-url>"
 };
 
-const googleSignIn = async () => {
-  loader.style.display = "block";
-  let provider = await new firebase.auth.GoogleAuthProvider();
-  await firebase.auth().signInWithRedirect(provider);
-  await firebase
-    .auth()
-    .getRedirectResult()
-    .then(function(result) {
-      if (result.credential) {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = result.credential.accessToken;
-        log(token);
-        // ...
-      }
-      // The signed-in user info.
-      return result.user;
-    })
-    .catch(function(error) {
-      // Handle Errors here.
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // The email of the user's account used.
-      var email = error.email;
-      // The firebase.auth.AuthCredential type that was used.
-      var credential = error.credential;
-      // ...
-      log(errorMessage, errorCode, email, credential);
-    });
-};
-
-loginButton.addEventListener("click", () => {
-  const email = loginEmailInput.value;
-  const password = loginPasswordInput.value;
-  emailPasswordSignIn(email, password);
-});
+// The start method will wait until the DOM is loaded.
+ui.start("#firebaseui-auth-container", uiConfig);
