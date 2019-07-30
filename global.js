@@ -1,22 +1,21 @@
-var provider = new firebase.auth.GoogleAuthProvider();
+let userDetailsDiv = document.getElementById("userDetails")
 
-firebase.auth().signInWithRedirect(provider);
 
-firebase.auth().getRedirectResult().then(function (result) {
-    if (result.credential) {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = result.credential.accessToken;
-        // ...
-    }
-    // The signed-in user info.
-    var user = result.user;
-}).catch(function (error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    // The email of the user's account used.
-    var email = error.email;
-    // The firebase.auth.AuthCredential type that was used.
-    var credential = error.credential;
-    // ...
-});
+function displayProfileObject() {
+
+    firebase.auth().onAuthStateChanged(() => {
+
+        let grabTheDetails =
+            `<div class="userDetails">
+                <img src="${auth.currentUser.photoURL}">
+                <p>${auth.currentUser.displayName}</p>
+                <span>Lorem ipsum dolor sit ametconsecteturadipisicingelit.Neque quos voluptatum, unde obcaecati iste liberosuscipittempore reprehenderit accusantium minus minima nondoloribusquam dignissimos asperiores magnamHic molestias quos.Lorem ipsum dolor sit ametconsecteturadipisicingelit.Neque quos voluptatum, unde obcaecati iste liberosuscipittempore reprehenderit accusantium minus minima nondoloribusquam dignissimos asperiores magnamHic molestias quos</span>
+            </div> `
+
+        userDetailsDiv.innerHTML = grabTheDetails
+    })
+
+}
+
+displayProfileObject()
+
