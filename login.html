@@ -4,26 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css"
+    />
     <link rel="stylesheet" href="loginSignUp.css" />
     <title>Slack Cannon</title>
   </head>
   <body>
-    <div class="container">
-      <h3>Login</h3>
-      <div class="inputs">
-        <input type="text" id="loginEmail" placeholder="Email" />
-        <input type="password" id="loginPassword" placeholder="Password" />
-      </div>
-      <div class="loader" id="loginLoader"></div>
-      <button id="loginButton">Login</button>
-      <button id="google" onclick="googleSignIn()">
-        <img
-          src="https://www.gstatic.com/firebasejs/ui/0.5.0/images/auth/google.svg"
-        />
-        <span>Login with Google</span>
-      </button>
-      <p>Need an Account? <a href="signup.html">Sign Up</a></p>
-    </div>
+    <div id="firebaseui-auth-container" style="margin-top: 20vh"></div>
+    <div id="loader"></div>
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
 
