@@ -25,6 +25,7 @@ globalData.on("value", function(snapshot) {
     var message = `<div class="userDetails">
       <img src="${userObj.photoURL}">
       <p>${userObj.displayName}</p>
+      <button>Remove</button>
       <span>${obj.message}</span>
   </div> `;
     userDetailsDiv.insertAdjacentHTML("beforeend", message);
