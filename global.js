@@ -23,8 +23,8 @@ globalData.on("value", function(snapshot) {
   dataArray.forEach(obj => {
     var userObj = JSON.parse(obj.userObj);
     var message = `<div class="userDetails">
-      <img src="${userObj.photoURL}">
-      <p>${userObj.displayName}</p>
+      <div><img src="${userObj.photoURL}">
+      <p>${userObj.displayName}</p></div>
       <span>${obj.message}</span>
   </div> `;
     userDetailsDiv.insertAdjacentHTML("beforeend", message);
