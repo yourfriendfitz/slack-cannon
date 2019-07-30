@@ -69,6 +69,45 @@ html body .main {
   overflow-y: scroll;
 }
 
+/*Global CSS */
+.userDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0 20px 0;
+}
+
+.userDetails img {
+  border-radius: 15px;
+  width: 70px;
+  margin-left: 30px;
+}
+
+.userDetails p {
+  margin-left: 15px;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.userDetails span {
+  margin-left: 50px;
+  margin-right: 20px;
+  line-height: 170%;
+}
+
+#theGoodStuff {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -79,34 +118,3 @@ html body .main {
   }
 }
 /*# sourceMappingURL=styles.css.map */
-
-/*Global CSS */
-
-.userDetails {
-  display: flex;
-  align-items: center;
-  margin: 20px 0 20px 0;
-}
-
-.userDetails img{
-  border-radius: 15px;
-  width: 70px;
-  margin-left: 30px;
-}
-
-.userDetails p{
-  margin-left: 15px;
-  margin-bottom: 50px;
-  font-weight: bold;
-}
-
-.userDetails span{
-  margin-left: 50px;
-  margin-right: 20px;
-  line-height: 170%;
-}
-
-#theGoodStuff {
-  display: flex;
-  flex-direction: column;
-}
