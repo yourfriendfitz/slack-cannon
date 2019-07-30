@@ -22,6 +22,7 @@ globalData.on("value", function(snapshot) {
   var dataArray = Object.values(dataObj);
   dataArray.forEach(obj => {
     var userObj = JSON.parse(obj.userObj);
+    // put finished HTML here for template literal
     var message = `<div class="userDetails">
       <img src="${userObj.photoURL}">
       <p>${userObj.displayName}</p>
