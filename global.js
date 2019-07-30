@@ -1,21 +1,49 @@
-let userDetailsDiv = document.getElementById("userDetails")
+let userDetailsDiv = document.getElementById("userDetails");
 
+// function displayProfileObject() {
+//   firebase.auth().onAuthStateChanged(() => {
+//     let grabTheDetails = `<div class="userDetails">
+//                 <img src="${auth.currentUser.photoURL}">
+//                 <p>${auth.currentUser.displayName}</p>
+//                 <span>Lorem ipsum dolor sit ametconsecteturadipisicingelit.Neque quos voluptatum, unde obcaecati iste liberosuscipittempore reprehenderit accusantium minus minima nondoloribusquam dignissimos asperiores magnamHic molestias quos.Lorem ipsum dolor sit ametconsecteturadipisicingelit.Neque quos voluptatum, unde obcaecati iste liberosuscipittempore reprehenderit accusantium minus minima nondoloribusquam dignissimos asperiores magnamHic molestias quos</span>
+//             </div> `;
 
-function displayProfileObject() {
+//     userDetailsDiv.innerHTML = grabTheDetails;
+//   });
+// }
 
-    firebase.auth().onAuthStateChanged(() => {
+// displayProfileObject();
 
-        let grabTheDetails =
-            `<div class="userDetails">
-                <img src="${auth.currentUser.photoURL}">
-                <p>${auth.currentUser.displayName}</p>
-                <span>Lorem ipsum dolor sit ametconsecteturadipisicingelit.Neque quos voluptatum, unde obcaecati iste liberosuscipittempore reprehenderit accusantium minus minima nondoloribusquam dignissimos asperiores magnamHic molestias quos.Lorem ipsum dolor sit ametconsecteturadipisicingelit.Neque quos voluptatum, unde obcaecati iste liberosuscipittempore reprehenderit accusantium minus minima nondoloribusquam dignissimos asperiores magnamHic molestias quos</span>
-            </div> `
+var dataObj = {};
+var globalData = firebase.database().ref("global");
+globalData.on("value", function(snapshot) {
+  userDetailsDiv.innerHTML = "";
+  var dataObj = snapshot.val();
+  var dataArray = Object.values(dataObj);
+  dataArray.forEach(obj => {
+    var userObj = JSON.parse(obj.userObj);
+    var message = `<div class="userDetails">
+      <img src="${userObj.photoURL}">
+      <p>${userObj.displayName}</p>
+      <span>${obj.message}</span>
+  </div> `;
+    userDetailsDiv.insertAdjacentHTML("beforeend", message);
+    console.log(obj.message);
+    console.log(obj.timestamp);
+    console.log(JSON.parse(obj.userObj));
+  });
+});
 
-        userDetailsDiv.innerHTML = grabTheDetails
+const addUserPhoto = async url => {
+  const user = await firebase.auth().currentUser;
+  await user
+    .updateProfile({
+      photoURL: url
     })
-
-}
-
-displayProfileObject()
-
+    .then(function() {
+      // Update successful.
+    })
+    .catch(function(error) {
+      // An error happened.
+    });
+};
