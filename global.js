@@ -1,4 +1,4 @@
-let userDetailsDiv = document.getElementById("global-message-container");
+const userDetailsDiv = document.getElementById("global-message-container");
 
 // function displayProfileObject() {
 //   firebase.auth().onAuthStateChanged(() => {
@@ -62,7 +62,9 @@ globalData.on("value", function(snapshot) {
             minute: "numeric"
           })}</span>
           <span class="filler"> </span>
-          <button class="remove-message-button" onclick="deleteMessage('${keysArray[index]}')">X</button>
+          <button class="remove-message-button" onclick="deleteMessage('${
+            keysArray[index]
+          }')">X</button>
         </div>
         <span class="message-text">${obj.message}</span>
       </div>
