@@ -19,3 +19,11 @@ html body .container {
   padding: 80px;
 }
 /*# sourceMappingURL=loginSignUp.css.map */
+
+@media only screen and (min-width: 250px) and (max-width: 470px){
+ 
+  html body .container {
+    padding: 80px 0 80px 0;
+  }
+  
+}
