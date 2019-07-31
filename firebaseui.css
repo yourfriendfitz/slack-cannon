@@ -969,6 +969,7 @@ dialog.fixed {
 /* CARD CONTENT */
 .firebaseui-card-content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0 24px;
