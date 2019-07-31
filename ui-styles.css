@@ -174,9 +174,38 @@ body {
     border-radius: 4px;
     padding: 4px;
 }
+
 @media screen and (min-width: 769px) and (max-width: 1024px){
+    .sidenav {
+        width: 144px;
+    }
     .sidenav a {
-        font-size: 1em;
+        font-size: 1.2em;
+    }
+    .main {
+        margin-left: 144px;
+    }
+    .message-container img {
+        height: 70px;
+        border-radius: 12px;
+    }
+    .message-username-header {
+        margin-top: 3px;
+        margin-bottom: 5px;
+    }
+    .display-name {
+        font-size: .9em;
+    }
+    .time-posted-message {
+        font-size: .6em;
+    }
+    .remove-message-button {
+        border-radius: 12px;
+        border: 1px solid lightgray;
+        padding: 3px 7px 3px 7px;
+    }
+    .message-input-container {
+        padding: 8px
     }
 }
 
@@ -213,6 +242,13 @@ body {
     .message-text {
         font-size: .8em;
     }
+    .message-input-container {
+        padding: 4px
+    }
+    #global-message-input {
+        font-size: .8em;
+        padding: 2px;
+    }
 }
 
 @media screen and (max-width: 424px) {
@@ -246,5 +282,12 @@ body {
     }
     .message-text {
         font-size: .6em;
+    }
+    .message-input-container {
+        padding: 2px
+    }
+    #global-message-input {
+        font-size: .6em;
+        padding: 1px;
     }
 }
