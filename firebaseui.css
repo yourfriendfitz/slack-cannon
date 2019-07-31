@@ -957,7 +957,7 @@ dialog.fixed {
   overflow: visible;
   position: relative;
   text-align: left;
-  width: 100%;
+  width: 360px;
 }
 .firebaseui-container.mdl-card {
   overflow: visible;
@@ -989,12 +989,14 @@ dialog.fixed {
   padding-bottom: 16px;
 }
 .firebaseui-card-actions {
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   display: table;
   font-size: 14px;
   padding: 8px 24px 24px 24px;
   text-align: left;
-  width: 100%;
+  width: 100%; */
+  display: flex;
+  justify-content: center;
 }
 .firebaseui-form-links {
   display: table-cell;
@@ -1002,10 +1004,10 @@ dialog.fixed {
   width: 100%;
 }
 .firebaseui-form-actions {
-  display: table-cell;
+  /* display: table-cell;
   text-align: right;
   white-space: nowrap;
-  width: 100%;
+  width: 100%; */
 }
 .firebaseui-subtitle,
 .firebaseui-title {
@@ -1016,7 +1018,7 @@ dialog.fixed {
   line-height: 24px;
   margin: 0;
   padding: 0;
-  text-align: left;
+  text-align: center;
 }
 .firebaseui-title {
   padding-bottom: 16px;
@@ -1135,8 +1137,12 @@ input.firebaseui-input-invalid {
   text-align: center;
 }
 .firebaseui-tos-list {
-  list-style: none;
-  text-align: right;
+  /* list-style: none;
+  text-align: right; */
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 16px;
 }
 .firebaseui-inline-list-item {
   display: inline-block;
