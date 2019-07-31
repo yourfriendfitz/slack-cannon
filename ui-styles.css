@@ -1,0 +1,250 @@
+:root {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: darkgray;
+}
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.sidenav {
+    height: 100%;
+    width: 196px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidenav a {
+    padding: 5%;
+    margin-bottom: 2%;
+    text-decoration: none;
+    font-size: 1.5em;
+    color: #818181;
+    display: block;
+    /* border: 2px solid white;
+    border-radius: 8px; */
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 196px;
+    background-color: darkgray;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.messages-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    overflow-y: scroll;
+}
+
+.message-container {
+    display: flex;
+    padding-bottom: 8px;
+}
+
+.message-information {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8px;
+    width: 100%;
+}
+
+.message-username-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 4px;
+    margin-bottom: 5px;
+}
+
+.display-name {
+    font-weight: 800;
+    padding-right: 8px;
+}
+
+.time-posted-message {
+    font-size: .8em;
+}
+
+.filler {
+    flex: 2;
+}
+
+.remove-message-button{
+    background-color: white;
+    color: black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid lightgray;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+}
+
+.remove-message-button:hover {
+    background-color: darkred;
+    color: white;
+    border-color: black;
+}
+
+.remove-message-button:active {
+    background-color: darkred;
+    color: white;
+    border-color: black;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.19);
+    transform: translateY(2px);
+}
+
+.message-text {
+    font-weight: 200;
+}
+
+.message-container img {
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 16px;
+}
+
+.display-name {
+    font-weight: 800;
+    font-family: sans-serif;
+}
+
+.message-input-container {
+    padding: 16px;
+    display: flex;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+.message-input-container button{
+    flex: 1;
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    margin-left: 8px;
+}
+
+.message-input-container button:hover{
+    background-color: #2ee820;
+    color: white;
+    border-color: #2ee820;
+}
+
+#global-message-input {
+    width: calc(100vw - 196px);
+    flex: 12;
+    border: 2px solid black;
+    border-radius: 4px;
+    padding: 4px;
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .sidenav a {
+        font-size: 1em;
+    }
+}
+
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+    .sidenav {
+        display: none;
+    }
+    .main {
+        margin-left: 0;
+    }
+    .messages-container {
+        padding: 8px;
+    }
+    .message-container img {
+        height: 60px;
+        border-radius: 12px;
+    }
+    .message-username-header {
+        margin-top: 2px;
+        margin-bottom: 5px;
+    }
+    .display-name {
+        font-size: .8em;
+    }
+    .time-posted-message {
+        font-size: .5em;
+    }
+    .remove-message-button {
+        border-radius: 12px;
+        border: 1px solid lightgray;
+        padding: 2px 5px 2px 5px;
+    }
+    .message-text {
+        font-size: .8em;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .sidenav {
+        display: none;
+    }
+    .main {
+        margin-left: 0;
+    }
+    .messages-container {
+        padding: 4px;
+    }
+    .message-container img {
+        height: 40px;
+        border-radius: 8px;
+    }
+    .message-username-header {
+        margin-top: 1px;
+        margin-bottom: 5px;
+    }
+    .display-name {
+        font-size: .6em;
+    }
+    .time-posted-message {
+        font-size: .3em;
+    }
+    .remove-message-button {
+        border-radius: 8px;
+        border: 1px solid lightgray;
+        padding: 1px 3px 1px 3px;
+    }
+    .message-text {
+        font-size: .6em;
+    }
+}

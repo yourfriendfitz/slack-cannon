@@ -1,4 +1,4 @@
-let userDetailsDiv = document.getElementById("userDetails");
+let userDetailsDiv = document.getElementById("global-message-container");
 
 // function displayProfileObject() {
 //   firebase.auth().onAuthStateChanged(() => {
@@ -49,18 +49,23 @@ globalData.on("value", function(snapshot) {
   dataArray.forEach((obj, index) => {
     var userObj = JSON.parse(obj.userObj);
     // put finished HTML here for template literal
-    var message = `<div class="userDetails">
+    var message = `<div class="message-container">
       <img src="${userObj.photoURL}">
-      <p>${userObj.displayName} - ${new Date(obj.timestamp).toLocaleTimeString(
-      "en-US",
-      {
-        hour12: true,
-        hour: "numeric",
-        minute: "numeric"
-      }
-    )}</p>
-      <button onclick="deleteMessage('${keysArray[index]}')">Remove</button>
-      <span>${obj.message}</span>
+      <div class="message-information">
+        <div class="message-username-header">
+          <span class="display-name">${userObj.displayName} </span>
+          <span class="time-posted-message">${new Date(
+            obj.timestamp
+          ).toLocaleTimeString("en-US", {
+            hour12: true,
+            hour: "numeric",
+            minute: "numeric"
+          })}</span>
+          <span class="filler"> </span>
+          <button class="remove-message-button" onclick="deleteMessage('${keysArray[index]}')">X</button>
+        </div>
+        <span class="message-text">${obj.message}</span>
+      </div>
   </div> `;
     userDetailsDiv.insertAdjacentHTML("beforeend", message);
     console.log(obj.message);
