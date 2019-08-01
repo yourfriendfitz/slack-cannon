@@ -4,23 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="ui-styles.css" />
+    <link rel="stylesheet" href="events-styles.css" />
     <title>Slack Cannon</title>
   </head>
 
   <body>
     <!-- Side navigation -->
     <div class="sidenav">
-      <a href="index.html">Annoucements</a>
+      <div class="cannon-logo">
+        <img class="cannon-logo-image" src="cannon-white-logo.png" />
+      </div>
+      <a href="index.html">News</a>
       <a href="events.html">Events</a>
-      <a href="global.html">Global</a>
+      <a href="global.html">Social</a>
       <a href="map.html">Map</a>
       <a href="support.html">Support</a>
     </div>
 
     <!-- Page content -->
     <div class="main">
-      You are Here
+      <div id="events-title-header"><h1>The Cannon Events</h1></div>
+      <div class="events-messages-container" id="events-messages-container"></div>
+      <div id="events-message-input-container">
+        <input
+          id="events-message-input"
+          type="text"
+          placeholder="Enter Event Item Here"
+        />
+        <button>Submit</button>
+      </div>
     </div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -48,6 +61,6 @@
     </script>
 
     <script src="scripts.js"></script>
-    <script src="events.js"></script>
+    <script src="news.js"></script>
   </body>
 </html>
