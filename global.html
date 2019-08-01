@@ -9,6 +9,13 @@
   </head>
 
   <body>
+    <!-- hamburger menu -->
+    <div class="topnav" id="myTopnav">
+      <a href="javascript:void(0);" class="icon" onclick="openSideNav()">
+        <img class="iconImage" src="whitecannon.svg" alt=" White Cannon" />
+      </a>
+    </div>
+
     <!-- Side navigation -->
     <div class="sidenav">
       <div class="cannon-logo">
@@ -27,7 +34,11 @@
         <div class="messages-container" id="global-message-container"></div>
 
         <div class="message-input-container">
-          <input id="global-message-input" type="text" placeholder="Add your chat message here!" />
+          <input
+            id="global-message-input"
+            type="text"
+            placeholder="Add your chat message here!"
+          />
           <button>Submit</button>
         </div>
       </div>
@@ -56,6 +67,18 @@
       firebase.initializeApp(firebaseConfig);
       let database = firebase.database();
       let auth = firebase.auth();
+    </script>
+
+    <script>
+      function openSideNav() {
+        // var x = document.getElementById("myTopnav");
+        // if (x.className === "topnav") {
+        //   x.className += " responsive";
+        // } else {
+        //   x.className = "topnav";
+        // }
+        // Open Side Nav Will Be Here!
+      }
     </script>
     <script src="global.js" async defer></script>
   </body>
