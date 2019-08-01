@@ -1,0 +1,55 @@
+#cannon-map-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cannon-floor-img {
+    display: flex;
+    height: 100%;
+    margin: 8px;
+    opacity: 0.9;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+
+
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    .cannon-floor-img {
+        display: flex;
+        width: 850px;
+        height: 100%;
+        margin: 8px;
+        opacity: 0.9;
+        border: 2px solid black;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 768px){
+    .cannon-floor-img {
+        display: flex;
+        width: 550px;
+        height: 100%;
+        margin: 8px;
+        opacity: 0.9
+;
+        border: 2px solid black;
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width: 424px){
+    .cannon-floor-img {
+        display: flex;
+        width: 400px;
+        height: 100%;
+        margin: 8px;
+        opacity: 0.9
+;
+        border: 2px solid black;
+        border-radius: 8px;
+    }
+}
