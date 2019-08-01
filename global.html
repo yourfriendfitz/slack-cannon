@@ -11,7 +11,7 @@
   <body>
     <!-- hamburger menu -->
     <div class="topnav" id="myTopnav">
-      <a href="javascript:void(0);" class="icon" onclick="openSideNav()">
+      <a href="javascript:void(0);" class="icon">
         <img class="iconImage" src="whitecannon.svg" alt=" White Cannon" />
       </a>
     </div>
@@ -26,6 +26,7 @@
       <a href="global.html">Social</a>
       <a href="map.html">Map</a>
       <a href="support.html">Support</a>
+      <a onclick="firebase.auth().signOut()">Sign Out</a>
     </div>
 
     <!-- Page content -->
@@ -69,18 +70,34 @@
       let auth = firebase.auth();
     </script>
 
-    <script>
-      function openSideNav() {
-        // var x = document.getElementById("myTopnav");
-        // if (x.className === "topnav") {
-        //   x.className += " responsive";
-        // } else {
-        //   x.className = "topnav";
-        // }
-        // Open Side Nav Will Be Here!
-      }
-    </script>
     <script src="global.js" async defer></script>
     <script src="touch.js"></script>
+    <script>
+      const log = console.log;
+
+      const cannonIcon = document.querySelector(".icon");
+
+      const sidenav = document.querySelector(".sidenav");
+
+      firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+          if (user.photoURL === null) {
+            addUserPhoto("https://i.imgur.com/JeMMr0v.png");
+          }
+          return;
+        } else {
+          window.location.href = "login.html";
+        }
+      });
+
+      cannonIcon.addEventListener("click", () => {
+        log("here");
+        if (sidenav.style.display === "block") {
+          sidenav.style.display = "none";
+        } else {
+          sidenav.style.display = "block";
+        }
+      });
+    </script>
   </body>
 </html>
