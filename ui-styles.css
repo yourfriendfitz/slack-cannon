@@ -376,3 +376,8 @@ body {
     padding: 1px;
   }
 }
+@media screen and (min-width: 769px) {
+  .topnav {
+    display: none;
+  }
+}
