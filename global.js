@@ -1,5 +1,7 @@
 let userDetailsDiv = document.getElementById("global-message-container");
 
+const globalMessageInput = document.getElementById("global-message-input");
+
 // function displayProfileObject() {
 //   firebase.auth().onAuthStateChanged(() => {
 //     let grabTheDetails = `<div class="userDetails">
@@ -62,10 +64,12 @@ globalData.on("value", function(snapshot) {
             minute: "numeric"
           })}</span>
           <span class="filler"> </span>
-          <button class="remove-message-button" onclick="deleteMessage('${keysArray[index]}')">X</button>
+          <button class="remove-message-button" onclick="deleteMessage('${
+            keysArray[index]
+          }')">X</button>
         </div>
         <span class="message-text">${obj.message}</span>
-      </div>
+      </div>`;
     userDetailsDiv.insertAdjacentHTML("beforeend", message);
     console.log(obj.message);
     console.log(obj.timestamp);
@@ -93,3 +97,9 @@ const deleteMessage = key => {
     .ref(`global/${key}`)
     .remove();
 };
+
+globalMessageInput.addEventListener("keypress", eventObj => {
+  if (eventObj.keyCode === 13) {
+    writeNewPost(globalMessageInput.value);
+  }
+});
