@@ -62,10 +62,12 @@ globalData.on("value", function(snapshot) {
             minute: "numeric"
           })}</span>
           <span class="filler"> </span>
-          <button class="remove-message-button" onclick="deleteMessage('${keysArray[index]}')">X</button>
+          <button class="remove-message-button" onclick="deleteMessage('${
+            keysArray[index]
+          }')">X</button>
         </div>
         <span class="message-text">${obj.message}</span>
-      </div>
+      </div>`;
     userDetailsDiv.insertAdjacentHTML("beforeend", message);
     console.log(obj.message);
     console.log(obj.timestamp);
