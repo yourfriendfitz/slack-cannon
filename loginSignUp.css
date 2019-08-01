@@ -1,5 +1,39 @@
 :root {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
   background-color: darkgray;
 }
+
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+html body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+html body .container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+}
 /*# sourceMappingURL=loginSignUp.css.map */
+
+.innerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 250px) and (max-width: 425px) {
+  body {
+    background-color: white;
+    background-image: url("");
+  }
+}

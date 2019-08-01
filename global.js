@@ -66,7 +66,6 @@ globalData.on("value", function(snapshot) {
         </div>
         <span class="message-text">${obj.message}</span>
       </div>
-  </div> `;
     userDetailsDiv.insertAdjacentHTML("beforeend", message);
     console.log(obj.message);
     console.log(obj.timestamp);
