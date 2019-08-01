@@ -1,4 +1,6 @@
-const mainDiv = document.querySelector(".main");
+let newsDetailsDiv = document.getElementById("news-messages-container");
+
+const newsMessageInput = document.getElementById("news-message-input");
 
 function writeNewNews(body) {
   // A post entry.
@@ -27,29 +29,48 @@ function writeNewNews(body) {
 var dataObj = {};
 var globalData = firebase.database().ref("news");
 globalData.on("value", function(snapshot) {
-  mainDiv.innerHTML = "";
+  newsDetailsDiv.innerHTML = "";
   var dataObj = snapshot.val();
   var dataArray = Object.values(dataObj);
   var keysArray = Object.keys(dataObj);
   dataArray.forEach((obj, index) => {
     // put finished HTML here for template literal
     var message = `<div class="news-container">
-      <div class="news-information">
-        <div class="news-header">
-          <span class="time-posted-message">${new Date(
-            obj.timestamp
-          ).toLocaleTimeString("en-US", {
-            hour12: true,
-            hour: "numeric",
-            minute: "numeric"
-          })}</span>
-          <span class="filler"> </span>
-          <button class="remove-message-button" onclick="deleteMessage('${
-            keysArray[index]
-          }')">X</button>
-        </div>
-        <span class="message-text">${obj.body}</span>
+
+      <div class="bullet-point-img">
+        <img src="bullet-point-icon.png">
+      </div>
+
+      <div class="news-message-text-container">
+        <span class="news-message-text">${obj.body}</span>
+      </div>
+
+      <span class="time-posted-news">${new Date(
+        obj.timestamp
+      ).toLocaleTimeString("en-US", {
+        hour12: true,
+        hour: "numeric",
+        minute: "numeric"
+      })}</span>
+
+      <button class="remove-message-button" onclick="deleteMessage('${
+        keysArray[index]
+      }')">X</button>
+
       </div>`;
-    mainDiv.insertAdjacentHTML("beforeend", message);
+      newsDetailsDiv.insertAdjacentHTML("afterbegin", message);
   });
+});
+
+const deleteMessage = key => {
+  firebase
+    .database()
+    .ref(`news/${key}`)
+    .remove();
+};
+
+newsMessageInput.addEventListener("keypress", eventObj => {
+  if (eventObj.keyCode === 13) {
+    writeNewPost(newsMessageInput.value);
+  }
 });
