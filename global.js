@@ -71,9 +71,6 @@ globalData.on("value", function(snapshot) {
         <span class="message-text">${obj.message}</span>
       </div>`;
     userDetailsDiv.insertAdjacentHTML("beforeend", message);
-    console.log(obj.message);
-    console.log(obj.timestamp);
-    console.log(JSON.parse(obj.userObj));
   });
 });
 
@@ -97,6 +94,17 @@ const deleteMessage = key => {
     .ref(`global/${key}`)
     .remove();
 };
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    if (user.photoURL === null) {
+      addUserPhoto("https://i.imgur.com/JeMMr0v.png");
+    }
+    return;
+  } else {
+    window.location.href = "login.html";
+  }
+});
 
 globalMessageInput.addEventListener("keypress", eventObj => {
   if (eventObj.keyCode === 13) {
