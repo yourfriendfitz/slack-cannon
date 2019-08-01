@@ -5,23 +5,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="ui-styles.css" />
   <title>Slack Cannon</title>
 </head>
 
 <body>
   <!-- Side navigation -->
   <div class="sidenav">
-    <a href="index.html">Annoucements</a>
-    <a href="events.html">Events</a>
-    <a href="global.html">Global</a>
-    <a href="map.html">Map</a>
-    <a href="support.html">Support</a>
-  </div>
+      <div class="cannon-logo">
+        <img class="cannon-logo-image" src="cannon-white-logo.png" />
+      </div>
+      <a href="index.html">News</a>
+      <a href="events.html">Events</a>
+      <a href="global.html">Social</a>
+      <a href="map.html">Map</a>
+      <a href="support.html">Support</a>
+    </div>
 
   <!-- Page content -->
   <div class="main">
-    You are Here
+    <div id="cannon-map-content">You are here!</div>
   </div>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -48,7 +51,6 @@
     let database = firebase.database()
   </script>
 
-  <script src="global.js" async defer></script>
 </body>
 
 </html>
