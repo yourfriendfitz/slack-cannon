@@ -1,5 +1,7 @@
 let userDetailsDiv = document.getElementById("global-message-container");
 
+const globalMessageInput = document.getElementById("global-message-input");
+
 // function displayProfileObject() {
 //   firebase.auth().onAuthStateChanged(() => {
 //     let grabTheDetails = `<div class="userDetails">
@@ -95,3 +97,9 @@ const deleteMessage = key => {
     .ref(`global/${key}`)
     .remove();
 };
+
+globalMessageInput.addEventListener("keypress", eventObj => {
+  if (eventObj.keyCode === 13) {
+    writeNewPost(globalMessageInput.value);
+  }
+});
