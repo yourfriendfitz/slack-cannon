@@ -45,20 +45,23 @@ globalData.on("value", function(snapshot) {
         <span class="news-message-text">${obj.body}</span>
       </div>
 
+      <span class="filler-news"> </span>
+
       <span class="time-posted-news">${new Date(
         obj.timestamp
       ).toLocaleTimeString("en-US", {
         hour12: true,
+        month: "numeric",
+        day: "numeric",
+        year: "numeric",
         hour: "numeric",
         minute: "numeric"
       })}</span>
 
-      <button class="remove-message-button" onclick="deleteMessage('${
-        keysArray[index]
-      }')">X</button>
+      <button class="remove-message-button" onclick="deleteMessage('${keysArray[index]}')">X</button>
 
       </div>`;
-      newsDetailsDiv.insertAdjacentHTML("afterbegin", message);
+    newsDetailsDiv.insertAdjacentHTML("afterbegin", message);
   });
 });
 
