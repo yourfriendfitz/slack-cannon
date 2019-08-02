@@ -16,13 +16,24 @@
   </head>
 
   <body>
+    <!-- hamburger menu -->
+    <div class="topnav" id="myTopnav">
+      <a class="icon">
+        <img class="iconImage" src="whitecannon.svg" alt=" White Cannon" />
+      </a>
+    </div>
+
     <!-- Side navigation -->
     <div class="sidenav">
-      <a href="index.html">Annoucements</a>
+      <div class="cannon-logo">
+        <img class="cannon-logo-image" src="cannon-white-logo.png" />
+      </div>
+      <a href="index.html">News</a>
       <a href="events.html">Events</a>
-      <a href="global.html">Global</a>
+      <a href="global.html">Social</a>
       <a href="map.html">Map</a>
       <a href="support.html">Support</a>
+      <a onclick="firebase.auth().signOut()">Sign Out</a>
     </div>
 
     <!-- Page content -->
@@ -32,7 +43,7 @@
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
-
+    
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
     <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>

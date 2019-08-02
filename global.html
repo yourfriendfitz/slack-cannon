@@ -16,6 +16,13 @@
   </head>
 
   <body>
+    <!-- hamburger menu -->
+    <div class="topnav" id="myTopnav">
+      <a class="icon">
+        <img class="iconImage" src="whitecannon.svg" alt=" White Cannon" />
+      </a>
+    </div>
+
     <!-- Side navigation -->
     <div class="sidenav">
       <div class="cannon-logo">
@@ -26,6 +33,7 @@
       <a href="global.html">Social</a>
       <a href="map.html">Map</a>
       <a href="support.html">Support</a>
+      <a onclick="firebase.auth().signOut()">Sign Out</a>
     </div>
 
     <!-- Page content -->
@@ -68,6 +76,9 @@
       let database = firebase.database();
       let auth = firebase.auth();
     </script>
+
     <script src="global.js" async defer></script>
+    <script src="touch.js"></script>
+    <script src="scripts.js"></script>
   </body>
 </html>
