@@ -1457,12 +1457,11 @@ input.firebaseui-input-invalid {
 .firebaseui-id-page-phone-sign-in-start .firebaseui-form-actions div {
   float: left;
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .firebaseui-container {
     box-shadow: none;
     max-width: none;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
   }
   .firebaseui-card-header {
     border-bottom: 1px solid #e0e0e0;
@@ -2283,7 +2282,7 @@ body {
   padding: 0;
 }
 
-@media only screen and (min-width: 250px) and (max-width: 767px) {
+@media only screen and (min-width: 250px) and (max-width: 470px) {
   html body .container {
     padding: 0px;
   }
