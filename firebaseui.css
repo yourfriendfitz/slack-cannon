@@ -979,6 +979,8 @@ dialog.fixed {
   background-image: url("https://thecannonhouston.com/wp-content/uploads/2018/08/TheCannon_FinalWeblogo-e1534279209681.png");
   background-repeat: no-repeat;
   background-position: top;
+  margin: 16px;
+  margin-bottom: 0;
 }
 /* CARD CONTENT */
 
@@ -987,6 +989,8 @@ dialog.fixed {
   background-color: white;
   padding-top: 16px;
   padding-bottom: 16px;
+  margin: 16px;
+  margin-top: 0;
 }
 .firebaseui-card-actions {
   box-sizing: border-box;
@@ -1019,6 +1023,7 @@ dialog.fixed {
   text-align: left;
 }
 .firebaseui-title {
+  text-align: center;
   padding-bottom: 16px;
 }
 .firebaseui-subtitle {
