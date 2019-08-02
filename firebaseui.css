@@ -2284,6 +2284,8 @@ body {
 
 @media only screen and (min-width: 250px) and (max-width: 470px) {
   html body .container {
-    padding: 0px;
+    background-color: white;
+    padding: 0;
+    background-image: none;
   }
 }
