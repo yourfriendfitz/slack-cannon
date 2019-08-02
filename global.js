@@ -1,18 +1,8 @@
 let userDetailsDiv = document.getElementById("global-message-container");
 
-// function displayProfileObject() {
-//   firebase.auth().onAuthStateChanged(() => {
-//     let grabTheDetails = `<div class="userDetails">
-//                 <img src="${auth.currentUser.photoURL}">
-//                 <p>${auth.currentUser.displayName}</p>
-//                 <span>Lorem ipsum dolor sit ametconsecteturadipisicingelit.Neque quos voluptatum, unde obcaecati iste liberosuscipittempore reprehenderit accusantium minus minima nondoloribusquam dignissimos asperiores magnamHic molestias quos.Lorem ipsum dolor sit ametconsecteturadipisicingelit.Neque quos voluptatum, unde obcaecati iste liberosuscipittempore reprehenderit accusantium minus minima nondoloribusquam dignissimos asperiores magnamHic molestias quos</span>
-//             </div> `;
+const globalMessageInput = document.getElementById("global-message-input");
 
-//     userDetailsDiv.innerHTML = grabTheDetails;
-//   });
-// }
-
-// displayProfileObject();
+const submitButton = document.querySelector(".submit");
 
 function writeNewPost(message) {
   // A post entry.
@@ -62,14 +52,13 @@ globalData.on("value", function(snapshot) {
             minute: "numeric"
           })}</span>
           <span class="filler"> </span>
-          <button class="remove-message-button" onclick="deleteMessage('${keysArray[index]}')">X</button>
+          <button class="remove-message-button" onclick="deleteMessage('${
+            keysArray[index]
+          }')">X</button>
         </div>
         <span class="message-text">${obj.message}</span>
-      </div>
+      </div>`;
     userDetailsDiv.insertAdjacentHTML("beforeend", message);
-    console.log(obj.message);
-    console.log(obj.timestamp);
-    console.log(JSON.parse(obj.userObj));
   });
 });
 
@@ -93,3 +82,28 @@ const deleteMessage = key => {
     .ref(`global/${key}`)
     .remove();
 };
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    if (user.photoURL === null) {
+      addUserPhoto("https://i.imgur.com/JeMMr0v.png");
+    }
+    return;
+  } else {
+    window.location.href = "login.html";
+  }
+});
+
+globalMessageInput.addEventListener("keypress", eventObj => {
+  if (eventObj.keyCode === 13) {
+    writeNewPost(globalMessageInput.value);
+    globalMessageInput.value = "";
+  }
+});
+
+submitButton.addEventListener("click", () => {
+  if (globalMessageInput.value != "") {
+    writeNewPost(globalMessageInput.value);
+    globalMessageInput.value = "";
+  }
+});

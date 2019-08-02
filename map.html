@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#003640" />
+    <meta name="msapplication-TileColor" content="#003640" />
+    <meta name="theme-color" content="#003640" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="ui-styles.css">
+    <link rel="stylesheet" href="map.css">
+    <title>Slack Cannon</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="ui-styles.css" />
-  <link rel="stylesheet" href="map.css">
-  <title>Slack Cannon</title>
-</head>
+  <body>
+    <!-- hamburger menu -->
+    <div class="topnav" id="myTopnav">
+      <a class="icon">
+        <img class="iconImage" src="whitecannon.svg" alt=" White Cannon" />
+      </a>
+    </div>
 
-<body>
-  <!-- Side navigation -->
-  <div class="sidenav">
+    <!-- Side navigation -->
+    <div class="sidenav">
       <div class="cannon-logo">
         <img class="cannon-logo-image" src="cannon-white-logo.png" />
       </div>
@@ -21,6 +34,7 @@
       <a href="global.html">Social</a>
       <a href="map.html">Map</a>
       <a href="support.html">Support</a>
+      <a onclick="firebase.auth().signOut()">Sign Out</a>
     </div>
 
   <!-- Page content -->
@@ -40,30 +54,31 @@
   
   </div>
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
 
-  <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#config-web-app -->
-  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>
 
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyBCEFXvFzZE416fP4S6IQDEL27J5m-u5dY",
-      authDomain: "cannon-slack.firebaseapp.com",
-      databaseURL: "https://cannon-slack.firebaseio.com",
-      projectId: "cannon-slack",
-      storageBucket: "",
-      messagingSenderId: "116196377368",
-      appId: "1:116196377368:web:8205b710a728ebb4"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    let database = firebase.database()
-  </script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBCEFXvFzZE416fP4S6IQDEL27J5m-u5dY",
+        authDomain: "cannon-slack.firebaseapp.com",
+        databaseURL: "https://cannon-slack.firebaseio.com",
+        projectId: "cannon-slack",
+        storageBucket: "",
+        messagingSenderId: "116196377368",
+        appId: "1:116196377368:web:8205b710a728ebb4"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      let database = firebase.database();
+    </script>
 
-</body>
-
+    <script src="global.js" async defer></script>
+    <script src="scripts.js"></script>
+  </body>
 </html>

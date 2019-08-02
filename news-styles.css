@@ -1,0 +1,243 @@
+.main {
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    background-color: #003640;
+    margin-left: 195px;
+}
+
+#news-title-header {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    width: 100%;
+}
+
+#news-title-header h1 {
+    display: flex;
+    margin: 0;
+    padding: 20px 0 20px 0;
+    text-decoration: underline;
+}
+
+.news-messages-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-color: #006D82;
+    padding-top: 20px;
+}
+.news-container {
+    display: flex;
+    color: white;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 8px 16px 8px 16px;
+}
+
+.news-container * {
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.bullet-point-img img{
+    height: 48px;
+    flex: 1;
+}
+
+.news-message-text {
+    font-weight: 200;
+    flex: 1;
+}
+
+.filler-news {
+    flex: 50;
+}
+
+.time-posted-news {
+    flex: 1;
+    width: 56px;
+    font-weight: 200;
+    padding-right: 15px;
+    font-size: .5em;
+}
+
+#news-message-input-container {
+    padding: 8px;
+    display: none;
+    flex-direction: row;
+    border-top: 1.5px solid black;
+    border-left: 1.5px solid black;
+    background-color: #003640;
+    width: calc(100vw - 214px);
+}
+
+#news-message-input-container button{
+    flex: 1;
+    background-color: #f0f0f0;
+    color: black;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    border: 1.5px solid #111;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    margin-left: 8px;
+}
+
+#news-message-input-container button:hover{
+    left: 0;
+    background-color: rgba(255,255,255,.3);
+    color: white;
+    border-color: rgba(255,255,255,.3);
+}
+
+#news-message-input {
+    flex: 12;
+    border: 2px solid #111;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+#news-message-input {
+    outline: none;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px){
+
+    .main {
+        margin-left: 143px;
+    }
+
+    #news-title-header {
+        font-size: 1.5em;
+    }
+    
+    #news-title-header h1 {
+        padding: 16px 0 16px 0;
+    }
+
+    .news-messages-container {
+        padding-top: 16px;
+    }
+    
+    .news-container {
+        font-size: 1.2em;
+    }
+    
+    .news-container * {
+        padding-left: 4px;
+        padding-bottom: 4px;
+    }
+
+    .time-posted-news {
+        padding-right: 12px;
+        width: 46px;
+    }
+
+    #news-message-input-container {
+        width: calc(100% - 10px);
+        padding: 4px;
+    }
+
+}
+
+
+@media screen and (min-width: 425px) and (max-width: 768px) {
+
+    .main {
+        margin: 0;
+    }
+
+    #news-title-header {
+        font-size: 1.2em;
+    }
+    
+    #news-title-header h1 {
+        padding: 12px 0 12px 0;
+    }
+
+    .news-messages-container {
+        padding-top: 12px;
+    }
+    
+    .news-container {
+        font-size: 1em;
+        padding: 4px 8px 4px 8px;
+    }
+    
+    .news-container * {
+        padding-left: 3px;
+        padding-bottom: 3px;
+    }
+
+    .bullet-point-img img{
+        height: 36px;
+    }
+
+    .time-posted-news {
+        padding-right: 8px;
+    }
+
+    #news-message-input-container {
+        width: calc(100% - 8px);
+        padding: 2px;
+    }
+
+    #news-message-input-container button{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 424px) {
+
+    .main {
+        margin: 0;
+    }
+
+    #news-title-header {
+        font-size: 1em;
+    }
+    
+    #news-title-header h1 {
+        padding: 8px 0 8px 0;
+    }
+
+    .news-messages-container {
+        padding-top: 8px;
+    }
+    
+    .news-container {
+        font-size: .8em;
+        padding: 4px 4px 4px 4px;
+    }
+    
+    .news-container * {
+        padding-left: 2px;
+        padding-bottom: 2px;
+    }
+
+    .bullet-point-img img{
+        height: 24px;
+    }
+
+    .time-posted-news {
+        padding-right: 4px;
+    }
+
+    #news-message-input-container {
+        width: calc(100% - 8px);
+        padding: 2px;
+    }
+
+    #news-message-input-container button{
+        display: none;
+    }
+
+}
