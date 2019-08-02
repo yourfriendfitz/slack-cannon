@@ -38,7 +38,7 @@ globalData.on("value", function(snapshot) {
     var message = `<div class="news-container">
 
       <div class="bullet-point-img">
-        <img src="bullet-point-icon.png">
+        <img src="news-icon.png">
       </div>
 
       <div class="news-message-text-container">

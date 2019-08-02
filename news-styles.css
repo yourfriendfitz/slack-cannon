@@ -2,6 +2,8 @@
     flex-direction: column;
     height: 100vh;
     align-items: center;
+    background-color: #003640;
+    margin-left: 195px;
 }
 
 #news-title-header {
@@ -17,7 +19,7 @@
     display: flex;
     margin: 0;
     padding: 20px 0 20px 0;
-    text-shadow: 3px 3px black;
+    text-decoration: underline;
 }
 
 .news-messages-container {
@@ -25,14 +27,15 @@
     flex-direction: column;
     height: 100vh;
     width: 100%;
+    background-color: #006D82;
+    padding-top: 20px;
 }
 .news-container {
     display: flex;
     color: white;
     align-items: center;
     font-size: 1.5em;
-    text-shadow: 1px 1px black;
-    padding: 5px 0 5px 0;
+    padding: 8px 16px 8px 16px;
 }
 
 .news-container * {
@@ -41,7 +44,7 @@
 }
 
 .bullet-point-img img{
-    height: 20px;
+    height: 48px;
     flex: 1;
 }
 
@@ -51,7 +54,7 @@
 }
 
 .filler-news {
-    flex: 10;
+    flex: 50;
 }
 
 .time-posted-news {
@@ -64,7 +67,7 @@
 
 #news-message-input-container {
     padding: 8px;
-    display: flex;
+    display: none;
     flex-direction: row;
     border-top: 1.5px solid black;
     border-left: 1.5px solid black;
@@ -107,12 +110,20 @@
 
 @media screen and (min-width: 769px) and (max-width: 1024px){
 
+    .main {
+        margin-left: 143px;
+    }
+
     #news-title-header {
         font-size: 1.5em;
     }
     
     #news-title-header h1 {
         padding: 16px 0 16px 0;
+    }
+
+    .news-messages-container {
+        padding-top: 16px;
     }
     
     .news-container {
@@ -139,6 +150,10 @@
 
 @media screen and (min-width: 425px) and (max-width: 768px) {
 
+    .main {
+        margin: 0;
+    }
+
     #news-title-header {
         font-size: 1.2em;
     }
@@ -146,9 +161,14 @@
     #news-title-header h1 {
         padding: 12px 0 12px 0;
     }
+
+    .news-messages-container {
+        padding-top: 12px;
+    }
     
     .news-container {
         font-size: 1em;
+        padding: 4px 8px 4px 8px;
     }
     
     .news-container * {
@@ -157,7 +177,7 @@
     }
 
     .bullet-point-img img{
-        height: 15px;
+        height: 36px;
     }
 
     .time-posted-news {
@@ -173,6 +193,10 @@
 
 @media screen and (max-width: 424px) {
 
+    .main {
+        margin: 0;
+    }
+
     #news-title-header {
         font-size: 1em;
     }
@@ -180,9 +204,14 @@
     #news-title-header h1 {
         padding: 8px 0 8px 0;
     }
+
+    .news-messages-container {
+        padding-top: 8px;
+    }
     
     .news-container {
         font-size: .8em;
+        padding: 4px 4px 4px 4px;
     }
     
     .news-container * {
@@ -191,7 +220,7 @@
     }
 
     .bullet-point-img img{
-        height: 12px;
+        height: 24px;
     }
 
     .time-posted-news {
