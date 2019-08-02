@@ -7,6 +7,7 @@
 }
 
 #news-title-header {
+  background-color: #003640;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -114,12 +115,12 @@
   }
 
   #news-title-header {
-    display: none;
+    font-size: 1.5em;
   }
 
-  /* #news-title-header h1 {
-        padding: 16px 0 16px 0;
-    } */
+  #news-title-header h1 {
+    padding: 16px 0 16px 0;
+  }
 
   .news-messages-container {
     padding-top: 16px;
