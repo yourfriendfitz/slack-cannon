@@ -33,7 +33,11 @@ input[type="submit"] {
 }
 
 .container form {
-  margin: 100px 90px 0px 90px;
+  margin: 80px 90px 0px 90px;
+}
+
+.headerTitle {
+  text-align: center;
 }
 
 @media (min-width: 770px) and (max-width: 1024px) {
