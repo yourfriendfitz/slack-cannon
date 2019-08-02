@@ -303,6 +303,10 @@ body {
         font-size: .8em;
         padding: 2px;
     }
+
+    .message-input-container button{
+        display: none;
+    }
 }
 
 @media screen and (max-width: 424px) {
@@ -351,5 +355,9 @@ body {
     #global-message-input {
         font-size: .6em;
         padding: 1px;
+    }
+
+    .message-input-container button{
+        display: none;
     }
 }

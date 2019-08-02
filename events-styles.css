@@ -1,7 +1,6 @@
 .main {
     flex-direction: column;
     height: 100vh;
-    align-items: center;
     background-color: #003640;
     margin-left: 195px;
 }
@@ -19,33 +18,44 @@
     display: flex;
     margin: 0;
     padding: 20px 0 20px 0;
-    text-decoration: underline;
 }
 
 .events-messages-container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
     width: 100%;
     background-color: #006D82;
-    padding-top: 20px;
+    overflow-y: scroll;
 }
-.events-container {
+.event-container {
     display: flex;
-    color: white;
     align-items: center;
+    flex-direction: column;
+    background-color: rgba(255,255,255,.5);
     font-size: 1.5em;
+    margin: 20px;
     padding: 8px 16px 8px 16px;
+    min-height: min-content;
 }
 
-.events-container * {
+.event-container * {
     padding-left: 5px;
     padding-bottom: 5px;
 }
 
-.events-message-text {
-    font-weight: 200;
+.event-header {
+    font-weight: 700;
+    display: flex;
+    width: 100%;
+}
+
+.event-message-text {
+    font-weight: 300;
     flex: 1;
+}
+
+.remove-message-button {
+    display: none;
 }
 
 .filler-events {
@@ -55,11 +65,16 @@
 #events-message-input-container {
     padding: 8px;
     display: none;
-    flex-direction: row;
+    flex-direction: column;
     border-top: 1.5px solid black;
     border-left: 1.5px solid black;
     background-color: #003640;
     width: calc(100vw - 214px);
+}
+
+#events-title-and-submit-container {
+    display: flex;
+    margin-bottom: 8px;
 }
 
 #events-message-input-container button{
@@ -118,11 +133,11 @@
         padding-top: 16px;
     }
     
-    .events-container {
+    .event-container {
         font-size: 1.2em;
     }
     
-    .events-container * {
+    .event-container * {
         padding-left: 4px;
         padding-bottom: 4px;
     }
@@ -130,6 +145,10 @@
     #events-message-input-container {
         width: calc(100% - 10px);
         padding: 4px;
+    }
+
+    #events-title-and-submit-container {
+        margin-bottom: 4px;
     }
 
 }
@@ -153,12 +172,12 @@
         padding-top: 12px;
     }
     
-    .events-container {
+    .event-container {
         font-size: 1em;
         padding: 4px 8px 4px 8px;
     }
     
-    .events-container * {
+    .event-container * {
         padding-left: 3px;
         padding-bottom: 3px;
     }
@@ -166,6 +185,14 @@
     #events-message-input-container {
         width: calc(100% - 8px);
         padding: 2px;
+    }
+
+    #events-title-and-submit-container {
+        margin-bottom: 2px;
+    }
+
+    #events-message-input-container button{
+        display: none;
     }
 
 }
@@ -188,12 +215,12 @@
         padding-top: 8px;
     }
     
-    .events-container {
+    .event-container {
         font-size: .8em;
         padding: 4px 4px 4px 4px;
     }
     
-    .events-container * {
+    .event-container * {
         padding-left: 2px;
         padding-bottom: 2px;
     }
@@ -201,6 +228,14 @@
     #events-message-input-container {
         width: calc(100% - 8px);
         padding: 2px;
+    }
+
+    #events-title-and-submit-container {
+        margin-bottom: 2px;
+    }
+
+    #events-message-input-container button{
+        display: none;
     }
 
 }

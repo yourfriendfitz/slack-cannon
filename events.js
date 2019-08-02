@@ -1,5 +1,8 @@
 const mainDiv = document.getElementById("events-messages-container");
 
+const eventsTitleInput = document.getElementById("events-title-input");
+const eventsBodyInput = document.getElementById("events-body-input");
+
 function writeNewEvent(title, body) {
   // A post entry.
   var postData = {
@@ -35,15 +38,15 @@ globalData.on("value", function(snapshot) {
   dataArray.forEach((obj, index) => {
     // put finished HTML here for template literal
     var message = `<div class="event-container">
-      <div class="event-information">
         <div class="event-header">
+          <span class="filler-events"> </span>
           <span class="event-title">${obj.title} </span>
           <span class="filler-events"> </span>
           <button class="remove-message-button" onclick="deleteMessage('${
             keysArray[index]
           }')">X</button>
         </div>
-        <span class="message-text">${obj.body}</span>
+        <span class="event-message-text">${obj.body}</span>
       </div>`;
     mainDiv.insertAdjacentHTML("beforeend", message);
   });
@@ -56,8 +59,8 @@ const deleteMessage = key => {
     .remove();
 };
 
-eventsMessageInput.addEventListener("keypress", eventObj => {
+eventsBodyInput.addEventListener("keypress", eventObj => {
   if (eventObj.keyCode === 13) {
-    writeNewPost(eventsMessageInput.value);
+    writeNewPost(eventsBodyInput.value);
   }
 });

@@ -189,6 +189,10 @@
         padding: 2px;
     }
 
+    #news-message-input-container button{
+        display: none;
+    }
+
 }
 
 @media screen and (max-width: 424px) {
@@ -230,6 +234,10 @@
     #news-message-input-container {
         width: calc(100% - 8px);
         padding: 2px;
+    }
+
+    #news-message-input-container button{
+        display: none;
     }
 
 }
