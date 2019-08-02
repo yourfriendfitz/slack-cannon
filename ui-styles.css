@@ -160,7 +160,7 @@ body {
 
 .message-container img {
   height: 80px;
-  border: 2px solid #111;
+  /* border: 2px solid #111; */
   border-radius: 16px;
 }
 
@@ -172,8 +172,8 @@ body {
 .message-input-container {
   padding: 8px;
   display: flex;
-  border-top: 1.5px solid black;
-  border-left: 1.5px solid black;
+  /* border-top: 1.5px solid black; */
+  /* border-left: 1.5px solid black; */
   background-color: #003640;
 }
 
@@ -181,12 +181,12 @@ body {
   flex: 1;
   background-color: #f0f0f0;
   color: black;
-  border: none;
+  /* border: none; */
   text-align: center;
   text-decoration: none;
   font-weight: 600;
   display: inline-block;
-  border: 1.5px solid #111;
+  /* border: 1.5px solid #111; */
   border-radius: 4px;
   transition-duration: 0.4s;
   margin-left: 8px;
@@ -202,7 +202,7 @@ body {
 #global-message-input {
   width: calc(100vw - 196px);
   flex: 12;
-  border: 2px solid #111;
+  /* border: 2px solid #111; */
   border-radius: 4px;
   padding: 4px;
 }

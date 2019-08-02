@@ -2,19 +2,7 @@ let userDetailsDiv = document.getElementById("global-message-container");
 
 const globalMessageInput = document.getElementById("global-message-input");
 
-// function displayProfileObject() {
-//   firebase.auth().onAuthStateChanged(() => {
-//     let grabTheDetails = `<div class="userDetails">
-//                 <img src="${auth.currentUser.photoURL}">
-//                 <p>${auth.currentUser.displayName}</p>
-//                 <span>Lorem ipsum dolor sit ametconsecteturadipisicingelit.Neque quos voluptatum, unde obcaecati iste liberosuscipittempore reprehenderit accusantium minus minima nondoloribusquam dignissimos asperiores magnamHic molestias quos.Lorem ipsum dolor sit ametconsecteturadipisicingelit.Neque quos voluptatum, unde obcaecati iste liberosuscipittempore reprehenderit accusantium minus minima nondoloribusquam dignissimos asperiores magnamHic molestias quos</span>
-//             </div> `;
-
-//     userDetailsDiv.innerHTML = grabTheDetails;
-//   });
-// }
-
-// displayProfileObject();
+const submitButton = document.querySelector(".submit");
 
 function writeNewPost(message) {
   // A post entry.
@@ -109,5 +97,13 @@ firebase.auth().onAuthStateChanged(function(user) {
 globalMessageInput.addEventListener("keypress", eventObj => {
   if (eventObj.keyCode === 13) {
     writeNewPost(globalMessageInput.value);
+    globalMessageInput.value = "";
+  }
+});
+
+submitButton.addEventListener("click", () => {
+  if (globalMessageInput.value != "") {
+    writeNewPost(globalMessageInput.value);
+    globalMessageInput.value = "";
   }
 });
