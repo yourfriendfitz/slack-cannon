@@ -10,6 +10,10 @@ body {
   overflow: hidden;
 }
 
+.submit {
+  outline: none;
+}
+
 .sidenav {
   height: 100%;
   width: 196px;
@@ -61,12 +65,12 @@ body {
 }
 
 #cannon-map-content {
-    display: flex;
-    flex-direction: column;
-    background-color: #006D82;
-    width: 100%;
-    height: 100vh;
-    overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  background-color: #006d82;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 .chat-container {
@@ -208,158 +212,157 @@ body {
 }
 
 #global-message-input {
-    outline: none;
+  outline: none;
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px){
-    .sidenav {
-        width: 144px;
-    }
-    .sidenav a {
-        font-size: 1.75em;
-        padding-left: 8px;
-        width: calc(94.75% - 8px);
-    }
-    .main {
-        margin-left: 144px;
-    }
-    .messages-container {
-        padding: 6px;
-    }
-    
-    .message-container {
-        margin: 7px;
-        padding: 3px;
-        border-radius: 16px;
-    }
-    .message-container img {
-        height: 70px;
-        border-radius: 12px;
-    }
-    .message-username-header {
-        margin-top: 3px;
-        margin-bottom: 5px;
-        padding-right: 3px;
-    }
-    .display-name {
-        font-size: .9em;
-    }
-    .time-posted-message {
-        font-size: .6em;
-    }
-    .remove-message-button {
-        border-radius: 12px;
-        border: 1px solid lightgray;
-        padding: 3px 7px 3px 7px;
-    }
-    .message-input-container {
-        padding: 4px
-    }
-}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .sidenav {
+    width: 144px;
+  }
+  .sidenav a {
+    font-size: 1.75em;
+    padding-left: 8px;
+    width: calc(94.75% - 8px);
+  }
+  .main {
+    margin-left: 144px;
+  }
+  .messages-container {
+    padding: 6px;
+  }
 
+  .message-container {
+    margin: 7px;
+    padding: 3px;
+    border-radius: 16px;
+  }
+  .message-container img {
+    height: 70px;
+    border-radius: 12px;
+  }
+  .message-username-header {
+    margin-top: 3px;
+    margin-bottom: 5px;
+    padding-right: 3px;
+  }
+  .display-name {
+    font-size: 0.9em;
+  }
+  .time-posted-message {
+    font-size: 0.6em;
+  }
+  .remove-message-button {
+    border-radius: 12px;
+    border: 1px solid lightgray;
+    padding: 3px 7px 3px 7px;
+  }
+  .message-input-container {
+    padding: 4px;
+  }
+}
 
 @media screen and (min-width: 425px) and (max-width: 768px) {
-    .sidenav {
-        display: none;
-    }
-    .main {
-        margin-left: 0;
-    }
-    .messages-container {
-        padding: 4px;
-    }
-    .message-container {
-        margin: 5px;
-        padding: 2px;
-        border-radius: 12px;
-    }
-    .message-container img {
-        height: 60px;
-        border-radius: 12px;
-    }
-    .message-username-header {
-        margin-top: 2px;
-        margin-bottom: 5px;
-        padding-right: 2px;
-    }
-    .display-name {
-        font-size: .8em;
-    }
-    .time-posted-message {
-        font-size: .5em;
-    }
-    .remove-message-button {
-        border-radius: 12px;
-        border: 1px solid lightgray;
-        padding: 2px 5px 2px 5px;
-    }
-    .message-text {
-        font-size: .8em;
-    }
-    .message-input-container {
-        padding: 3px
-    }
-    #global-message-input {
-        font-size: .8em;
-        padding: 2px;
-    }
+  .sidenav {
+    display: none;
+  }
+  .main {
+    margin-left: 0;
+  }
+  .messages-container {
+    padding: 4px;
+  }
+  .message-container {
+    margin: 5px;
+    padding: 2px;
+    border-radius: 12px;
+  }
+  .message-container img {
+    height: 60px;
+    border-radius: 12px;
+  }
+  .message-username-header {
+    margin-top: 2px;
+    margin-bottom: 5px;
+    padding-right: 2px;
+  }
+  .display-name {
+    font-size: 0.8em;
+  }
+  .time-posted-message {
+    font-size: 0.5em;
+  }
+  .remove-message-button {
+    border-radius: 12px;
+    border: 1px solid lightgray;
+    padding: 2px 5px 2px 5px;
+  }
+  .message-text {
+    font-size: 0.8em;
+  }
+  .message-input-container {
+    padding: 3px;
+  }
+  #global-message-input {
+    font-size: 0.8em;
+    padding: 2px;
+  }
 
-    .message-input-container button{
-        display: none;
-    }
+  .message-input-container button {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 424px) {
-    .sidenav {
-        display: none;
-    }
-    .main {
-        margin-left: 0;
-    }
-    .messages-container {
-        padding: 2px;
-    }
-    .message-container {
-        margin: 3px;
-        padding: 1px;
-        border-radius: 4px;
-    }
-    .message-container img {
-        height: 40px;
-        border-radius: 8px;
-    }
-    .message-username-header {
-        margin-top: 1px;
-        margin-bottom: 5px;
-        padding-right: 1px;
-    }
-    .display-name {
-        font-size: .6em;
-    }
-    .time-posted-message {
-        font-size: .3em;
-    }
-    .remove-message-button {
-        border-radius: 8px;
-        border: 1px solid lightgray;
-        padding: 0 2px 0 2px;
-        font-size: .3em;
-        font-weight: 700;
-    }
-    .message-text {
-        font-size: .6em;
-    }
-    .message-input-container {
-        padding: 2px
-    }
-    #global-message-input {
-        font-size: .6em;
-        padding: 1px;
-    }
+  .sidenav {
+    display: none;
+  }
+  .main {
+    margin-left: 0;
+  }
+  .messages-container {
+    padding: 2px;
+  }
+  .message-container {
+    margin: 3px;
+    padding: 1px;
+    border-radius: 4px;
+  }
+  .message-container img {
+    height: 40px;
+    border-radius: 8px;
+  }
+  .message-username-header {
+    margin-top: 1px;
+    margin-bottom: 5px;
+    padding-right: 1px;
+  }
+  .display-name {
+    font-size: 0.6em;
+  }
+  .time-posted-message {
+    font-size: 0.3em;
+  }
+  .remove-message-button {
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    padding: 0 2px 0 2px;
+    font-size: 0.3em;
+    font-weight: 700;
+  }
+  .message-text {
+    font-size: 0.6em;
+  }
+  .message-input-container {
+    padding: 2px;
+  }
+  #global-message-input {
+    font-size: 0.6em;
+    padding: 1px;
+  }
 
-    .message-input-container button{
-        display: none;
-    }
+  .message-input-container button {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
