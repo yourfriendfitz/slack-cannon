@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="ui-styles.css" />
+    <link rel="stylesheet" href="support.css" />
     <title>Slack Cannon</title>
   </head>
 
@@ -37,8 +38,30 @@
     </div>
 
     <!-- Page content -->
-    <div class="main">
-      You are Here
+
+    <div class="container">
+      <form action="action_page.php">
+        <label for="fname">Full Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Your full name.."
+        />
+
+        <label for="lname">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email.." />
+
+        <label for="subject">Issue</label>
+        <textarea
+          id="issue"
+          name="issue"
+          placeholder="Write something.."
+          style="height:200px"
+        ></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
     </div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
