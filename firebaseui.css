@@ -1461,7 +1461,8 @@ input.firebaseui-input-invalid {
   .firebaseui-container {
     box-shadow: none;
     max-width: none;
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
   }
   .firebaseui-card-header {
     border-bottom: 1px solid #e0e0e0;
