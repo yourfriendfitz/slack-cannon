@@ -1457,7 +1457,7 @@ input.firebaseui-input-invalid {
 .firebaseui-id-page-phone-sign-in-start .firebaseui-form-actions div {
   float: left;
 }
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .firebaseui-container {
     box-shadow: none;
     max-width: none;
@@ -2282,7 +2282,7 @@ body {
   padding: 0;
 }
 
-@media only screen and (min-width: 250px) and (max-width: 470px) {
+@media only screen and (min-width: 250px) and (max-width: 767px) {
   html body .container {
     padding: 0px;
   }
