@@ -1,7 +1,5 @@
 const mainDiv = document.getElementById("events-messages-container");
 
-const eventInputDiv = document.querySelector("#events-message-input-container")
-
 const eventsTitleInput = document.getElementById("events-title-input");
 const eventsBodyInput = document.getElementById("events-body-input");
 
@@ -67,6 +65,3 @@ eventsBodyInput.addEventListener("keypress", eventObj => {
   }
 });
 
-if(userIsAdmin) {
-  eventInputDiv.style.display = "block"
-}

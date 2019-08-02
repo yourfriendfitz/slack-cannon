@@ -2,6 +2,12 @@ const log = console.log;
 
 let userIsAdmin = false;
 
+const eventInputDiv =
+  document.querySelector("#events-message-input-container") || null;
+
+const newsInputDiv =
+  document.querySelector("#news-message-input-container") || null;
+
 const cannonIcon = document.querySelector(".icon");
 
 const sidenav = document.querySelector(".sidenav");
@@ -17,7 +23,12 @@ firebase.auth().onAuthStateChanged(function(user) {
       (user.email === "antonio.tobar.dev@gmail.com") |
       (user.email === "jacob.bankston.smile@gmail.com")
     ) {
-      userIsAdmin = true;
+      if (eventInputDiv) {
+        eventInputDiv.style.display = "block";
+      }
+      if (newsInputDiv) {
+        newsInputDiv.style.display = "block";
+      }
     }
     return;
   } else {
