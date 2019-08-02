@@ -9,7 +9,7 @@ const sidenav = document.querySelector(".sidenav");
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     if (user.photoURL === null) {
-      addUserPhoto("https://i.imgur.com/U8xT9Fv.png");
+      addUserPhoto("https://i.imgur.com/JeMMr0v.png");
     }
     if (
       (user.email === "fitzgerald913@gmail.com") |
