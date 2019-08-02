@@ -486,6 +486,7 @@ body {
     padding: 3px;
   }
   #global-message-input {
+    height: 32px;
     font-size: 0.8em;
     padding: 2px;
   }
@@ -535,6 +536,7 @@ body {
     padding: 2px;
   }
   #global-message-input {
+    height: 32px;
     font-size: 0.6em;
     padding: 1px;
   }
