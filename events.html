@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="ui-styles.css" />
+    <link rel="stylesheet" href="events-styles.css" />
     <title>Slack Cannon</title>
   </head>
 
@@ -38,7 +39,15 @@
 
     <!-- Page content -->
     <div class="main">
-      You are Here
+      <div id="events-title-header"><h1>Events @ Cannon</h1></div>
+      <div class="events-messages-container" id="events-messages-container"></div>
+      <div id="events-message-input-container">
+        <div id="events-title-and-submit-container">
+          <input id="events-title-input" type="text" placeholder="Enter Event Title Here"/>
+          <button>Submit</button>
+        </div>
+        <textarea id="events-body-input" rows="4" cols="50" placeholder="Enter Event Information Here"></textarea>
+      </div>
     </div>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->

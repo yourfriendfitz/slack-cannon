@@ -1,4 +1,7 @@
-const mainDiv = document.querySelector(".main");
+const mainDiv = document.getElementById("events-messages-container");
+
+const eventsTitleInput = document.getElementById("events-title-input");
+const eventsBodyInput = document.getElementById("events-body-input");
 
 function writeNewEvent(title, body) {
   // A post entry.
@@ -35,23 +38,29 @@ globalData.on("value", function(snapshot) {
   dataArray.forEach((obj, index) => {
     // put finished HTML here for template literal
     var message = `<div class="event-container">
-      <div class="event-information">
         <div class="event-header">
+          <span class="filler-events"> </span>
           <span class="event-title">${obj.title} </span>
-          <span class="time-posted-message">${new Date(
-            obj.timestamp
-          ).toLocaleTimeString("en-US", {
-            hour12: true,
-            hour: "numeric",
-            minute: "numeric"
-          })}</span>
-          <span class="filler"> </span>
+          <span class="filler-events"> </span>
           <button class="remove-message-button" onclick="deleteMessage('${
             keysArray[index]
           }')">X</button>
         </div>
-        <span class="message-text">${obj.body}</span>
+        <span class="event-message-text">${obj.body}</span>
       </div>`;
     mainDiv.insertAdjacentHTML("beforeend", message);
   });
+});
+
+const deleteMessage = key => {
+  firebase
+    .database()
+    .ref(`events/${key}`)
+    .remove();
+};
+
+eventsBodyInput.addEventListener("keypress", eventObj => {
+  if (eventObj.keyCode === 13) {
+    writeNewPost(eventsBodyInput.value);
+  }
 });
