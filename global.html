@@ -11,7 +11,7 @@
   <body>
     <!-- hamburger menu -->
     <div class="topnav" id="myTopnav">
-      <a href="javascript:void(0);" class="icon">
+      <a class="icon">
         <img class="iconImage" src="whitecannon.svg" alt=" White Cannon" />
       </a>
     </div>
@@ -72,32 +72,6 @@
 
     <script src="global.js" async defer></script>
     <script src="touch.js"></script>
-    <script>
-      const log = console.log;
-
-      const cannonIcon = document.querySelector(".icon");
-
-      const sidenav = document.querySelector(".sidenav");
-
-      firebase.auth().onAuthStateChanged(function(user) {
-        if (user) {
-          if (user.photoURL === null) {
-            addUserPhoto("https://i.imgur.com/JeMMr0v.png");
-          }
-          return;
-        } else {
-          window.location.href = "login.html";
-        }
-      });
-
-      cannonIcon.addEventListener("click", () => {
-        log("here");
-        if (sidenav.style.display === "block") {
-          sidenav.style.display = "none";
-        } else {
-          sidenav.style.display = "block";
-        }
-      });
-    </script>
+    <script src="scripts.js"></script>
   </body>
 </html>

@@ -16,9 +16,9 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 cannonIcon.addEventListener("click", () => {
-  if (sidenav.style.display === "flex") {
-    sidenav.style.display = "none";
+  if ((sidenav.style.display === "") | (sidenav.style.display === "none")) {
+    sidenav.style.display = "flex";
   } else {
-    sidenav.style.display === "flex";
+    sidenav.style.display = "none";
   }
 });
