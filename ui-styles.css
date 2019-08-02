@@ -92,7 +92,7 @@ body {
   display: flex;
   margin: 4px;
   padding: 4px;
-  background-color: white;
+  background-color: lightgray;
   border-radius: 20px;
 }
 
