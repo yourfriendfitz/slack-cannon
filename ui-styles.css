@@ -546,3 +546,9 @@ body {
     display: none;
   }
 }
+
+@media screen and (max-width: 768) {
+  #global-message-input {
+    height: 32px;
+  }
+}
