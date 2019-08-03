@@ -32,6 +32,10 @@ input[type="submit"] {
   width: 100%;
 }
 
+.main {
+  display: block;
+}
+
 /* Add a background color and some padding around the form */
 .container {
   border-radius: 5px;
