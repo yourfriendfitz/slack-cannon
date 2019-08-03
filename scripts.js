@@ -61,7 +61,7 @@ const darkMode = () => {
   }
   if (document.querySelector(".headerTitle")) {
     document.querySelector(".headerTitle").style.color = "#696969";
-    document.querySelector(`input[type="submit"]`).style.backgroundColor =
+    document.querySelectorAll(`input`).style.backgroundColor =
       "#696969";
   }
 };
