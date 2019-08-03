@@ -2285,7 +2285,9 @@ body {
 @media only screen and (min-width: 250px) and (max-width: 470px) {
   html body .container {
     background-color: white;
-    padding: 0;
-    background-image: none;
+    padding: 0px;
+  }
+  .firebaseui-container {
+    height: 100vh;
   }
 }
