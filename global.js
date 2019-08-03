@@ -34,8 +34,8 @@ var globalData = firebase.database().ref("global");
 globalData.on("value", function(snapshot) {
   userDetailsDiv.innerHTML = "";
   var dataObj = snapshot.val();
-  var dataArray = Object.values(dataObj) || [];
-  var keysArray = Object.keys(dataObj) || [];
+  var dataArray = Object.values(dataObj);
+  var keysArray = Object.keys(dataObj);
   dataArray.forEach((obj, index) => {
     var userObj = JSON.parse(obj.userObj);
     // put finished HTML here for template literal
