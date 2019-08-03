@@ -43,3 +43,12 @@ cannonIcon.addEventListener("click", () => {
     sidenav.style.display = "none";
   }
 });
+
+const darkMode = () => {
+  const divs = document.querySelectorAll("div");
+  divs.forEach(div => {
+    div.style.backgroundColor = "black";
+  });
+  document.querySelector(".sidenav").style.backgroundColor = "#696969"
+  document.querySelector(".cannon-logo").style.backgroundColor = "#696969"
+};
