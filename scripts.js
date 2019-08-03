@@ -52,8 +52,9 @@ const darkMode = () => {
   document.querySelector(".sidenav").style.backgroundColor = "#696969";
   document.querySelector(".cannon-logo").style.backgroundColor = "#696969";
   if (document.querySelector(".event-container")) {
-    document.querySelector(".event-container").style.backgroundColor =
-      "#696969";
+    document.querySelectorAll(".event-container").forEach(eventElement => {
+      eventElement.style.backgroundColor = "#696969";
+    });
   }
   if (document.querySelector(".message-container")) {
     document.querySelector(".message-container").style.backgroundColor =
@@ -64,5 +65,6 @@ const darkMode = () => {
     document.querySelectorAll("input").forEach(input => {
       input.style.backgroundColor = "#696969";
     });
+    document.querySelector("textarea").style.backgroundColor = "#696969";
   }
 };
