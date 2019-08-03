@@ -60,6 +60,11 @@ const darkMode = () => {
     document.querySelector(".message-container").style.backgroundColor =
       "#696969";
   }
+  if (document.querySelector(".cannon-floor-img")) {
+    document.querySelectorAll(".cannon-floor-img").forEach(img => {
+      img.style.opacity = "0.5";
+    });
+  }
   if (document.querySelector(".headerTitle")) {
     document.querySelector(".headerTitle").style.color = "#696969";
     document.querySelectorAll("input").forEach(input => {
