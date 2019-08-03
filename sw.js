@@ -102,10 +102,6 @@ self.__precacheManifest = [
     "revision": "d4fee4d7294480f9469f302099c514db"
   },
   {
-    "url": "new-global.html",
-    "revision": "d41d8cd98f00b204e9800998ecf8427e"
-  },
-  {
     "url": "README.md",
     "revision": "657e3bb66540c170278f286ef8a14c8e"
   },
