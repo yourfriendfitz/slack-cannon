@@ -1,4 +1,4 @@
-const mainDiv = document.getElementById("events-messages-container");
+const eventsMainDiv = document.getElementById("events-messages-container");
 
 const eventsTitleInput = document.getElementById("events-title-input");
 const eventsBodyInput = document.getElementById("events-body-input");
@@ -31,7 +31,7 @@ function writeNewEvent(title, body) {
 var dataObj = {};
 var globalData = firebase.database().ref("events");
 globalData.on("value", function(snapshot) {
-  mainDiv.innerHTML = "";
+  eventsMainDiv.innerHTML = "";
   var dataObj = snapshot.val();
   var dataArray = Object.values(dataObj);
   var keysArray = Object.keys(dataObj);
@@ -48,7 +48,7 @@ globalData.on("value", function(snapshot) {
         </div>
         <span class="event-message-text">${obj.body}</span>
       </div>`;
-    mainDiv.insertAdjacentHTML("beforeend", message);
+    eventsMainDiv.insertAdjacentHTML("beforeend", message);
   });
 });
 
