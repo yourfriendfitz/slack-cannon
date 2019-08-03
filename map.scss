@@ -48,6 +48,9 @@ p {
 }
 
 @media screen and (min-width: 424px) and (max-width: 768px) {
+  .main {
+    height: calc(100vh - 64px);
+  }
   .map-buttons {
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);
@@ -91,6 +94,9 @@ p {
 }
 
 @media screen and (max-width: 423px) {
+  .main {
+    height: calc(100vh - 64px);
+  }
   .map-buttons {
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);

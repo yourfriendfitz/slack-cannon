@@ -16,5 +16,6 @@ html body {
 
 html body .container {
   padding: 80px;
+  overflow: hidden;
 }
 /*# sourceMappingURL=loginSignUp.css.map */
