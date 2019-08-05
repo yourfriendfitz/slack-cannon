@@ -1,7 +1,7 @@
 # Slack for The Cannon
 > A Solution for Socialization in the Workspace
 
-####[Live Website!](https://cannon-slack.firebaseapp.com/index.html)
+[Live Website!](https://cannon-slack.firebaseapp.com/index.html)
 
 ## Languages and Services
 
@@ -53,7 +53,7 @@ __Sign Out__ - Members can sign out from their [Firebase Authenticated](https://
 ## Creators
 __Jacob Bankston, Joshua Fitzgerald, Nickolas Fuentes, Antonio Tobar__
 
-Jacob Bankston - [LinkedIn]() - [Twitter]() - [Medium]() - [GitHub]() - [Email](jacob.bankston.smile@gmail.com)
-Joshua Fitzgerald - [LinkedIn]() - [Twitter]() - [Medium]() - [GitHub]() - [Email]()
-Nickolas Fuentes - [LinkedIn]() - [Twitter]() - [Medium]() - [GitHub]() - [Email]()
-Antonio Tobar - [LinkedIn]() - [Twitter]() - [Medium]() - [GitHub]() - [Email]()
+Jacob Bankston - [LinkedIn](https://www.linkedin.com/in/jacob-bankston-85534195/) - [Twitter](https://twitter.com/_JacobBankston) - [Medium](https://medium.com/@_JacobBankston) - [GitHub](https://github.com/Jacob-Bankston) - [Email](jacob.bankston.smile@gmail.com)
+Joshua Fitzgerald - [LinkedIn](https://www.linkedin.com/in/fitz6/) - [GitHub](https://github.com/yourfriendfitz)
+Nickolas Fuentes - [LinkedIn](http://linkedin.com/in/nickolasfuentes) - [GitHub](https://github.com/nickfuentes)
+Antonio Tobar - [GitHub](https://github.com/TonyTcode) - [Email](antonio.tobar.dev@gmail.com)
