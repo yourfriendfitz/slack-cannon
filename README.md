@@ -54,6 +54,9 @@ __Sign Out__ - Members can sign out from their [Firebase Authenticated](https://
 __Jacob Bankston, Joshua Fitzgerald, Nickolas Fuentes, Antonio Tobar__
 
 Jacob Bankston - [LinkedIn](https://www.linkedin.com/in/jacob-bankston-85534195/) - [Twitter](https://twitter.com/_JacobBankston) - [Medium](https://medium.com/@_JacobBankston) - [GitHub](https://github.com/Jacob-Bankston) - [Email](jacob.bankston.smile@gmail.com)
+
 Joshua Fitzgerald - [LinkedIn](https://www.linkedin.com/in/fitz6/) - [GitHub](https://github.com/yourfriendfitz)
+
 Nickolas Fuentes - [LinkedIn](http://linkedin.com/in/nickolasfuentes) - [GitHub](https://github.com/nickfuentes)
+
 Antonio Tobar - [GitHub](https://github.com/TonyTcode) - [Email](antonio.tobar.dev@gmail.com)
