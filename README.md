@@ -58,4 +58,4 @@ Joshua Fitzgerald - [LinkedIn](https://www.linkedin.com/in/fitz6/) - [GitHub](ht
 
 Nickolas Fuentes - [LinkedIn](http://linkedin.com/in/nickolasfuentes) - [GitHub](https://github.com/nickfuentes)
 
-Antonio Tobar - [Linkedin](https://www.linkedin.com/in/antonio-tobar-dev/)[GitHub](https://github.com/TonyTcode) - [Email](antonio.tobar.dev@gmail.com)
+Antonio Tobar - [Linkedin](https://www.linkedin.com/in/antonio-tobar-dev/) - [GitHub](https://github.com/TonyTcode) - [Email](antonio.tobar.dev@gmail.com)
