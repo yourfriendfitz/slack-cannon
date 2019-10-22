@@ -14,7 +14,7 @@ Coworking Spaces are all the rage in the Business World right now. Many of them 
 
 This is where we come in! We have a team filled with people that love to socialize, and we wanted to find a way to solve this problem for our current workspace.
 
-We have created a simple communication platform for members of the community designed in a way to promote socialization between the members.
+We have created a simple communication platform for members of the community designed in a way to promote socialization between each other.
 
 ![Front News Page](front-page-screenshot.png)
 ## Features
